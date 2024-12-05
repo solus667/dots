@@ -62,7 +62,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
  bindsym $mod+Return exec xfce4-terminal
-# bindsym $mod+Return exec kitty
+ bindsym $mod+t exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -222,8 +222,11 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Border shit
-# This makes your titles disappear. 
-# idk why but comment them out if you want them back.
+# Comment this out if you want your titles back.
+# Titles still show in stacked and float
 for_window [tiling_from="user"] border pixel 2
 for_window [tiling_from="auto"] border pixel 2
-for_window [floating_from="user"] border pixel 4
+for_window [floating_from="user"] border pixel 4 
+for_window [class="^.*"] border pixel 2
+
+
