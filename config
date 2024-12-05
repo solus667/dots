@@ -222,6 +222,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Border shit
+# This makes your titles disappear. 
+# idk why but comment them out if you want them back.
 for_window [tiling_from="user"] border pixel 2
 for_window [tiling_from="auto"] border pixel 2
 for_window [floating_from="user"] border pixel 4
