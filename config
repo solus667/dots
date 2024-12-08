@@ -14,6 +14,10 @@ set $mod Mod4
 # Numlock 
 exec_always --no-startup-id numlockx on
 
+# Tap to Click
+ exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Tapping Enabled" 1
+ exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Natural Scrolling Enabled" 1
+
 # Nitrogen
 exec_always --no-startup-id nitrogen --restore &
 
@@ -204,29 +208,38 @@ gaps outer 3
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3blocks
-#	position top
-#	padding 2px 10px
-#	tray_padding 5px
-#	font pango:IBM 3270 Regular 11
-#}
+bar {
+        status_command i3blocks
+        position top
+        padding 2px 2px
+        tray_padding 2px
+        font pango:JetBrainsMono Bold 9
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #808080 #323232 #dedede #d79921   #808080
+     colors {   
+
+        background #282828
+
+        focused_workspace  #b8bb26  #282828  #ebdbb2
+        active_workspace   #fabd2f  #282828  #fabd2f
+        inactive_workspace #83a598  #282828  #83a598
+        urgent_workspace   #cc241d  #282828  #fb4934
+
+        }
+
+}
+
+client.focused          #928374 #323232 #dedede #d79921   #808080
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background #282828
 
 # Border shit
-# Comment this out if you want your titles back.
-# Titles still show in stacked and float
-for_window [tiling_from="user"] border pixel 2
-for_window [tiling_from="auto"] border pixel 2
-for_window [floating_from="user"] border pixel 4 
-for_window [class="^.*"] border pixel 2
+#for_window [tiling_from="user"] border pixel 1
+#for_window [tiling_from="auto"] border pixel 1
+#for_window [floating_from="user"] border pixel 3 
+#for_window [floating_from="auto"] border pixel 3
 
 
