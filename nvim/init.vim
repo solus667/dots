@@ -11,3 +11,5 @@ set title
 set smarttab    
 set cursorline
 set jumpoptions="stack,view"
+
+colorscheme default
