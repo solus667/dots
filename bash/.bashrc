@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\](\u@\h) \[\033[01;35m\](\w)\[\033[00m\] :\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\](\u@\h) \[\033[01;35m\](\w)\[\033[00m\] :\$ '
 else
 	PS1='${debian_chroot:+($debian_chroot)}(\u@\h) (\w) :\$ '
 fi
@@ -91,6 +91,15 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
+alias reboot='sudo reboot'
+alias up='sudo apt update'
+alias lup='sudo apt list --upgradable'
+alias upg='sudo apt upgrade'
+alias ff='fastfetch'
+alias fup='flatpak update'
+alias nf='neofetch'
+alias nup='sudo nala update'
+alias nupg='sudo nala upgrade'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -111,3 +120,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+source /etc/profile.d/bash_completion.sh
