@@ -11,5 +11,13 @@ set title
 set smarttab    
 set cursorline
 set jumpoptions="stack,view"
+set mouse=a
+set mouse=nicr
 
-colorscheme default
+colorscheme pablo 
+
+
+
+
+
+
