@@ -14,9 +14,10 @@ set $mod Mod4
 # Numlock 
 exec_always --no-startup-id numlockx on
 
-# Tap to Click
- exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Tapping Enabled" 1
- exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Natural Scrolling Enabled" 1
+# Key Indicators
+ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+ bindsym --release Num_Lock exec pkill -SIGRTMIN+11 i3blocks
+
 
 # Nitrogen
 exec_always --no-startup-id nitrogen --restore &
@@ -27,13 +28,17 @@ exec_always --no-startup-id nitrogen --restore &
 # Picom
 exec_always --no-startup-id picom
 
+# Tap to Click
+ exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Tapping Enabled" 1
+ exec xinput set-prop "DELL0AB4:00 04F3:3147 Touchpad" "libinput Natural Scrolling Enabled" 1
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono Regular 9
+font pango:DejaVuSansM Nerd Font Book 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-# font pango:DejaVu Sans Mono 8
+# font pango:JetBrainsMono Regular 10
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -48,7 +53,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+ exec_always --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -66,7 +71,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
  bindsym $mod+Return exec xfce4-terminal
- bindsym $mod+t exec kitty
+# bindsym $mod+t exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -107,7 +112,6 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
 
@@ -142,7 +146,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "0"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -198,48 +202,55 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
+
 }
+
 
 bindsym $mod+r mode "resize"
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+ gaps inner 6 
+ gaps outer 2
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
 bar {
-        status_command i3blocks
-        position top
-        padding 2px 2px
-        tray_padding 2px
-        font pango:JetBrainsMono Bold 9
+	status_command i3blocks #-c /etc/i3status.conf
+	position top
+	padding 2px 2px
+	tray_padding 2px
+	font pango:DejaVuSansM Nerd Font 10
 
-     colors {   
+    colors {	
+	
+	background #282828
+	statusline #d99271
+	separator #928374
 
-        background #282828
-
-        focused_workspace  #b8bb26  #282828  #ebdbb2
-        active_workspace   #fabd2f  #282828  #fabd2f
-        inactive_workspace #83a598  #282828  #83a598
-        urgent_workspace   #cc241d  #282828  #fb4934
-
-        }
-
+	focused_workspace  #b8bb26  #282828  #ebdbb2
+	active_workspace   #fabd2f  #282828  #fabd2f
+	inactive_workspace #83a598  #282828  #83a598
+	urgent_workspace   #cc241d  #282828  #fb4934
+	
+	}
+		
 }
 
-client.focused          #928374 #323232 #dedede #d79921   #808080
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# Border Colors
+# class                 border  backgr. text    indicator child_border
+
+client.focused          #458588 #282828 #83a598 #98971a   #458588
+client.focused_inactive #b16286 #282828 #ebdbb2 #ebdbb2   #b16286
+client.unfocused        #928374 #282828 #928374 #928374   #928374
+client.urgent           #fb4934 #282828 #fb4934 #fb4934   #fb4934
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background #282828
 
 # Border shit
-#for_window [tiling_from="user"] border pixel 1
-#for_window [tiling_from="auto"] border pixel 1
-#for_window [floating_from="user"] border pixel 3 
-#for_window [floating_from="auto"] border pixel 3
-
+# for_window [tiling_from="user"] border pixel 2
+# for_window [tiling_from="auto"] border pixel 2
+# for_window [floating_from="user"] border pixel 2 
+# for_window [floating_from="auto"] border pixel 2
 
