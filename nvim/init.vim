@@ -1,3 +1,5 @@
+color molokai
+
 set number
 set relativenumber
 set autoindent
@@ -14,7 +16,6 @@ set jumpoptions="stack,view"
 set mouse=a
 set mouse=nicr
 
-colorscheme pablo 
 
 
 
