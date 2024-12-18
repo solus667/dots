@@ -2,12 +2,12 @@
 
 <channel name="xfce4-terminal" version="1.0">
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_TRANSPARENT"/>
-  <property name="background-darkness" type="double" value="0.90000000000000002"/>
-  <property name="color-foreground" type="string" value="#FFFFFF"/>
-  <property name="color-background" type="string" value="#300A24"/>
-  <property name="color-cursor" type="string" value="#FFFFFF"/>
+  <property name="background-darkness" type="double" value="0.94999999999999996"/>
+  <property name="color-foreground" type="string" value="#BBBBBB"/>
+  <property name="color-background" type="string" value="#1B1D1E"/>
+  <property name="color-cursor" type="string" value="#BBBBBB"/>
   <property name="color-cursor-use-default" type="bool" value="false"/>
-  <property name="color-palette" type="string" value="#2E3436;#CC0000;#4E9A06;#C4A000;#3465A4;#75507B;#06989A;#D3D7CF;#555753;#EF2929;#8AE234;#FCE94F;#729FCF;#AD7FA8;#34E2E2;#EEEEEC"/>
+  <property name="color-palette" type="string" value="#1B1D1E;#7325FA;#23E298;#60D4DF;#D08010;#FF0087;#D0A843;#BBBBBB;#555555;#9D66F6;#5FE0B1;#6DF2FF;#FFAF00;#FF87AF;#FFCE51;#FFFFFF"/>
   <property name="dropdown-width" type="uint" value="65"/>
   <property name="dropdown-height" type="uint" value="65"/>
   <property name="dropdown-position-vertical" type="uint" value="50"/>
@@ -50,6 +50,6 @@
   <property name="color-selection-use-default" type="bool" value="true"/>
   <property name="color-bold" type="string" value=""/>
   <property name="color-bold-is-bright" type="bool" value="true"/>
-  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="color-use-theme" type="bool" value="true"/>
   <property name="tab-activity-color" type="string" value="#aa0000"/>
 </channel>

@@ -4,17 +4,24 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <value type="int" value="2"/>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=6;x=960;y=14"/>
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="0"/>
-      <property name="size" type="uint" value="22"/>
+      <property name="size" type="uint" value="25"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="20"/>
         <value type="int" value="7"/>
+        <value type="int" value="17"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="18"/>
+        <value type="int" value="16"/>
+        <value type="int" value="19"/>
+        <value type="int" value="23"/>
+        <value type="int" value="21"/>
+        <value type="int" value="22"/>
         <value type="int" value="10"/>
         <value type="int" value="27"/>
         <value type="int" value="2"/>
@@ -28,6 +35,7 @@
         <value type="int" value="11"/>
         <value type="int" value="12"/>
         <value type="int" value="29"/>
+        <value type="int" value="15"/>
       </property>
       <property name="background-style" type="uint" value="1"/>
       <property name="background-rgba" type="array">
@@ -38,39 +46,13 @@
       </property>
       <property name="length-adjust" type="bool" value="true"/>
     </property>
-    <property name="panel-2" type="empty">
-      <property name="position" type="string" value="p=10;x=957;y=1055"/>
-      <property name="size" type="uint" value="48"/>
-      <property name="autohide-behavior" type="uint" value="1"/>
-      <property name="background-style" type="uint" value="1"/>
-      <property name="position-locked" type="bool" value="true"/>
-      <property name="plugin-ids" type="array">
-        <value type="int" value="14"/>
-        <value type="int" value="21"/>
-        <value type="int" value="23"/>
-        <value type="int" value="18"/>
-        <value type="int" value="19"/>
-        <value type="int" value="16"/>
-        <value type="int" value="22"/>
-        <value type="int" value="13"/>
-        <value type="int" value="17"/>
-        <value type="int" value="15"/>
-      </property>
-      <property name="background-rgba" type="array">
-        <value type="double" value="0.15686274509803921"/>
-        <value type="double" value="0.15686274509803921"/>
-        <value type="double" value="0.15686274509803921"/>
-        <value type="double" value="0.80000000000000004"/>
-      </property>
-      <property name="enter-opacity" type="uint" value="100"/>
-    </property>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
       <property name="flat-buttons" type="bool" value="true"/>
       <property name="show-handle" type="bool" value="false"/>
-      <property name="show-labels" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
       <property name="show-only-minimized" type="bool" value="false"/>
       <property name="show-wireframes" type="bool" value="false"/>
     </property>
@@ -85,7 +67,7 @@
       <property name="workspace-scrolling" type="bool" value="true"/>
     </property>
     <property name="plugin-5" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
+      <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
@@ -130,37 +112,33 @@
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
       <property name="mpris-players" type="string" value="chromium.instance10539;chromium.instance11167;chromium.instance11817;chromium.instance12565;chromium.instance1449;chromium.instance14641;chromium.instance1475;chromium.instance15012;chromium.instance1538;chromium.instance1577;chromium.instance1595;chromium.instance16088;chromium.instance1621;chromium.instance1622;chromium.instance1637;chromium.instance16583;chromium.instance1681;chromium.instance1692;chromium.instance1699;chromium.instance1700;chromium.instance1717;chromium.instance17246;chromium.instance1765;chromium.instance1780;chromium.instance1820;chromium.instance1865;chromium.instance18871;chromium.instance1906;chromium.instance1915;chromium.instance2050;chromium.instance2055;chromium.instance20677;chromium.instance2426;chromium.instance2688;chromium.instance3019;chromium.instance3066;chromium.instance3134;chromium.instance3184;chromium.instance3498;chromium.instance3812;chromium.instance3842;chromium.instance4051;chromium.instance4089;chromium.instance4394;chromium.instance4406;chromium.instance4408;chromium.instance4633;chromium.instance4911;chromium.instance5228;chromium.instance5395;chromium.instance6146;chromium.instance6383;chromium.instance6637;chromium.instance7336;chromium.instance8779;chromium.instance9048;chromium.instance9173;chromium.instance9476;edge.instance11290;firefox.instance_1_134;firefox.instance_1_168;firefox.instance_1_173;firefox.instance_1_195;firefox.instance_1_249;firefox.instance_1_250;io.github.celluloid_player.Celluloid.instance-1;io.github.Pithos;pithos;smplayer;spotify;vlc"/>
-      <property name="known-players" type="string" value="Chrome;io.github.celluloid_player.Celluloid;io.github.Pithos"/>
+      <property name="known-players" type="string" value="Chrome;firefox-esr;io.github.celluloid_player.Celluloid;io.github.Pithos"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-11" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
+      <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-format" type="string" value="%H:%M"/>
-      <property name="digital-time-font" type="string" value="DejaVu Sans Mono Bold 12"/>
+      <property name="digital-time-format" type="string" value="%I:%M %p"/>
+      <property name="digital-time-font" type="string" value="JetBrains Mono 12"/>
       <property name="tooltip-format" type="string" value="%x"/>
       <property name="digital-date-format" type="string" value="%m/%d/%Y"/>
       <property name="mode" type="uint" value="2"/>
     </property>
-    <property name="plugin-13" type="string" value="separator">
-      <property name="style" type="uint" value="2"/>
-      <property name="expand" type="bool" value="false"/>
-    </property>
     <property name="plugin-15" type="string" value="thunar-tpa"/>
-    <property name="plugin-20" type="string" value="separator">
-      <property name="expand" type="bool" value="false"/>
-      <property name="style" type="uint" value="1"/>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-1" type="string" value="separator"/>
     <property name="plugin-27" type="string" value="separator">
-      <property name="style" type="uint" value="1"/>
+      <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="false"/>
     </property>
-    <property name="plugin-29" type="string" value="separator"/>
+    <property name="plugin-29" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
     <property name="plugin-7" type="string" value="whiskermenu">
-      <property name="button-icon" type="string" value="emblem-debian-white"/>
+      <property name="button-icon" type="string" value="xfce4_xicon3"/>
       <property name="hover-switch-category" type="bool" value="true"/>
       <property name="recent-items-max" type="int" value="0"/>
       <property name="favorites-in-recent" type="bool" value="true"/>
@@ -182,8 +160,14 @@
       </property>
       <property name="recent" type="array">
       </property>
+      <property name="show-button-icon" type="bool" value="true"/>
+      <property name="show-button-title" type="bool" value="false"/>
     </property>
-    <property name="plugin-10" type="string" value="places"/>
+    <property name="plugin-10" type="string" value="places">
+      <property name="show-recent" type="bool" value="false"/>
+      <property name="mount-open-volumes" type="bool" value="true"/>
+      <property name="show-button-type" type="int" value="0"/>
+    </property>
     <property name="plugin-14" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17342907781.desktop"/>
@@ -192,11 +176,6 @@
     <property name="plugin-16" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17342907872.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-17" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="17342908143.desktop"/>
       </property>
     </property>
     <property name="plugin-18" type="string" value="launcher">
@@ -222,6 +201,14 @@
     <property name="plugin-23" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17342917688.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-17" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17345346081.desktop"/>
       </property>
     </property>
   </property>
