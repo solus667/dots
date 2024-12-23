@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\](\u@\h) \[\033[01;35m\](\w)\[\033[00m\] \n  \$}  '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\][\u@\h \[\033[01;35m\]\w]\[\033[00m\] \n [\$]  '
 else
-		PS1='${debian_chroot:+($debian_chroot)}(\u@\h) (\w)\n  \$}  '
+		PS1='${debian_chroot:+($debian_chroot)}{\u@\h:\w}\n  \$}  '
 fi
 unset color_prompt force_color_prompt
 
@@ -91,15 +91,17 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-alias reboot='sudo reboot'
+#alias reboot='sudo reboot'
 alias up='sudo apt update'
 alias lup='sudo apt list --upgradable'
 alias upg='sudo apt upgrade'
 alias ff='fastfetch'
 alias fup='flatpak update'
 alias nf='neofetch'
-alias nup='sudo nala update'
-alias nupg='sudo nala upgrade'
+alias nvim='/opt/nvim-linux64/bin/nvim'
+alias :q='exit'
+#alias nup='sudo nala update'
+#alias nupg='sudo nala upgrade'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -121,3 +123,7 @@ if ! shopt -oq posix; then
   fi
 fi
 source /etc/profile.d/bash_completion.sh
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export EDITOR='/opt/nvim-linux64/bin/nvim'
+export VISUAL='/opt/nvim-linux64/bin/nvim'
