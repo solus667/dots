@@ -1,5 +1,3 @@
-color molokai
-
 set number
 set relativenumber
 set autoindent
@@ -15,10 +13,4 @@ set cursorline
 set jumpoptions="stack,view"
 set mouse=a
 set mouse=nicr
-
-
-
-
-
-
-
+color default
