@@ -17,3 +17,6 @@ vim.cmd [[colorscheme default]]
 vim.opt.colorcolumn = "90"
 vim.opt.cursorcolumn = true 
 vim.opt.ignorecase = true
+
+vim.cmd [[packloadall]]
+vim.cmd [[syntax on]]
