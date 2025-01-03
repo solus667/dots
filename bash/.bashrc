@@ -88,21 +88,26 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-#alias reboot='sudo reboot'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 alias up='sudo apt update'
-alias lup='sudo apt list --upgradable'
+alias upl='sudo apt list --upgradable'
 alias upg='sudo apt upgrade'
 alias ff='fastfetch'
 alias fup='flatpak update'
 alias nf='neofetch'
-alias nvim='/opt/nvim-linux64/bin/nvim'
+alias cvim='code'
 alias :q='exit'
-#alias nup='sudo nala update'
-#alias nupg='sudo nala upgrade'
-
+alias :rb='reboot'
+alias :sd='shutdown now'
+alias :ar='sudo apt autoremove'
+alias :cm='cmatrix'
+alias vi='vim'
+alias svim='sudo vim'
+alias sran='sudo ranger'
+alias nvim='/opt/nvim-linux64/bin/nvim'
+alias :cb='cbonsai'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -124,6 +129,8 @@ if ! shopt -oq posix; then
 fi
 source /etc/profile.d/bash_completion.sh
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
-export EDITOR='/opt/nvim-linux64/bin/nvim'
-export VISUAL='/opt/nvim-linux64/bin/nvim'
+EDITOR='/opt/nvim-linux64/bin/nvim'
+#export PATH="$PATH:/opt/nvim-linux64/bin"
+#export VISUAL="$VISUAL:/opt/nvim-linux64/bin"
+#export EDITOR="$:/opt/nvim-linux64/bin"
+## Current EOF
