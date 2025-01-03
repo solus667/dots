@@ -17,6 +17,7 @@ set jumpoptions="stack,view"
 set mouse=a
 set mouse=nicr
 set colorcolumn=100
+let g:ale_completion_enabled = 1
 
 packloadall
 syntax on
