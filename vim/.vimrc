@@ -1,4 +1,4 @@
-color default 
+colorscheme habamax
 
 set number
 set relativenumber
@@ -16,8 +16,14 @@ set cursorcolumn
 set jumpoptions="stack,view"
 set mouse=a
 set mouse=nicr
+set nocompatible
 set colorcolumn=100
-let g:ale_completion_enabled = 1
-
-packloadall
 syntax on
+
+"autocmd VimEnter * NERDTree
+
+" call .vimrc.plug
+if filereadable(expand("~/.vimrc.plug"))
+		source ~/.vimrc.plug
+endif
+
