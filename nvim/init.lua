@@ -1,37 +1,23 @@
-require("config.lazy")
-require('lualine').setup()
-require('mini.cursorword').setup()
-require('mini.completion').setup()
-require('mini.icons').setup()
-require('neo-tree').setup()
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+vim.g.have_nerd_font = true
+require('config.lazy')
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.autoindent = true
-vim.opt.background = dark
-vim.opt.ruler = true
-vim.opt.laststatus = 2
-vim.opt.tabstop = 4
-vim.opt.linebreak = true
-vim.opt.visualbell = true
-vim.opt.title = true
-vim.opt.smarttab = true
 vim.opt.cursorline = true
-vim.opt.jumpoptions = "stack,view"
-vim.opt.mouse = a
-vim.opt.mouse = nicr
-vim.cmd [[colorscheme tokyodark]]
-vim.opt.colorcolumn = "90"
-vim.opt.cursorcolumn = true 
-vim.opt.ignorecase = true
+vim.opt.cursorcolumn = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
-vim.api.nvim_create_augroup("neotree", {})
-vim.api.nvim_create_autocmd("UiEnter", {
-  desc = "Open Neotree automatically",
-  group = "neotree",
-  callback = function()
-    if vim.fn.argc() == 0 then
-      vim.cmd "Neotree toggle"
-    end
-  end,
-})
+vim.opt.termguicolors = true
+vim.cmd('colorscheme retrobox')
+
+vim.keymap.set('n', '<leader>vv', ':Telescope find_files<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>vb', ':Telescope oldfiles<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>bb', ':Telescope buffers<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>zf', ':Telescope<CR>', { noremap = true})
+vim.keymap.set('n', '<leader>cs', ':Telescope colorscheme<CR>', { noremap = true})
+vim.keymap.set('n', '<leader>fb', ':Telescope file_browser path=%:p:h select_buffer=true<CR>')
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle float<CR>')

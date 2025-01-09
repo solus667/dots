@@ -1,0 +1,59 @@
+return{
+
+{ "ficcdaf/ashen.nvim" },
+
+{
+    "tiagovla/tokyodark.nvim",
+    opts = {
+        -- custom options here
+    },
+    config = function(_, opts)
+        require("tokyodark").setup(opts) -- calling setup is optional
+        vim.cmd [[colorscheme tokyodark]]
+    end,
+},
+
+{ "rebelot/kanagawa.nvim" },
+
+{ 
+	"rose-pine/neovim", 
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
+},
+
+{
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+},
+
+{
+  "oxfist/night-owl.nvim",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function()
+    -- load the colorscheme here
+    require("night-owl").setup()
+    vim.cmd.colorscheme("night-owl")
+  end,
+},
+
+{
+  'comfysage/evergarden',
+  priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+  opts = {
+    transparent_background = true,
+    variant = 'medium', -- 'hard'|'medium'|'soft'
+    overrides = { }, -- add custom overrides
+  },
+},
+
+{
+  "zootedb0t/citruszest.nvim",
+  lazy = false,
+  priority = 1000,
+},
+
+}
