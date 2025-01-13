@@ -1,0 +1,22 @@
+body {
+	background-color: #2b2b2b;
+	text-align: center;
+
+}
+
+h1 {
+	color: orangered;
+	text-align: center;
+	font-family: monospace;
+}
+
+p {
+	align-self: center;
+	font-family: fantasy;
+	font-size: 14px;
+	color: greenyellow;
+	background-color: black;
+	background-attachment: fixed;
+	width: 640p;
+	height: 480p;
+}
