@@ -12,3 +12,4 @@ message = f"Hello, {full_name.title()}!"
 print(message)
 # format
 full_name = "{} {}".format(first_name, last_name)
+print(f"{first_name.title()}, you bitch.")
