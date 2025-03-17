@@ -1,29 +1,38 @@
-colorscheme habamax
+:let mapleader = " "
+:map <Leader>tt :NERDTreeToggle<Esc>
+let NERDTreeShowHidden=1
 
 set number
 set relativenumber
-set autoindent
-set background=dark
-set ruler
-set laststatus=2
-set tabstop=4
-set linebreak
-set visualbell
-set title
-set smarttab    
 set cursorline
 set cursorcolumn
-set jumpoptions="stack,view"
+set scrolloff=10
+set visualbell
 set mouse=a
-set mouse=nicr
-set nocompatible
-set colorcolumn=100
+set breakindent
+set ignorecase
+set smartcase
+filetype on
 syntax on
+set autoindent autoread background=dark
+set backspace=indent,eol,start belloff=all
+set display=lastline encoding=utf-8 hidden
+set history=10000 incsearch
+set nojoinspaces laststatus=2 ruler
+set showcmd smarttab nostartofline
+set switchbuf=uselast wildmenu "wildoptions=pum,tagfile
 
-"autocmd VimEnter * NERDTree
+set splitright
+set splitbelow
 
-" call .vimrc.plug
-if filereadable(expand("~/.vimrc.plug"))
-		source ~/.vimrc.plug
-endif
+set termguicolors
+colorscheme retrobox
 
+call plug#begin()
+
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
