@@ -2,6 +2,16 @@
 :map <Leader>tt :NERDTreeToggle<Esc>
 let NERDTreeShowHidden=1
 
+call plug#begin()
+
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'dracula/vim', { 'name': 'dracula' }
+
+call plug#end()
+
 set number
 set relativenumber
 set cursorline
@@ -27,12 +37,3 @@ set splitbelow
 
 set termguicolors
 colorscheme retrobox
-
-call plug#begin()
-
-Plug 'dense-analysis/ale'
-Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-
-call plug#end()
