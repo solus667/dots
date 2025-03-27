@@ -102,13 +102,16 @@ alias upd='sudo apt dist-upgrade'
 alias :ar='sudo apt autoremove'
 alias fup='flatpak update'
 # alias snp='snap refresh'
-alias poop='up && upg && upf && fup && ff'
+# alias poop='up && upg && upf && fup && ff'
+alias poop="sh ./poop.sh"
 alias ff='fastfetch'
 alias nf='neofetch'
 alias :rr='ranger'
 alias :sr='sudo ranger'
 alias vi='vim'
 alias nv='nvim'
+alias svi='sudo vim'
+alias snv='sudo nvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
